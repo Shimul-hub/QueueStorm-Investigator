@@ -6,12 +6,26 @@ Hybrid AI/API support copilot: **rules decide evidence and routing**; **OpenRout
 
 | Resource | URL |
 |----------|-----|
-| **Live Demo API** | `https://queuestorm-mock.onrender.com` *(replace with your Render URL after deploy)* |
-| **Swagger UI** | `https://queuestorm-mock.onrender.com/docs` |
-| **Health Check** | `https://queuestorm-mock.onrender.com/health` |
+| **Live Demo API** | `https://queuestorm-investigator-5btq.onrender.com` |
+| **Swagger UI** | `https://queuestorm-investigator-5btq.onrender.com/docs` |
+| **Health Check** | `https://queuestorm-investigator-5btq.onrender.com/health` |
 | **GitHub** | https://github.com/Shimul-hub/QueueStorm-Investigator |
 
 ---
+
+## Docker Fallback
+
+```bash
+git clone https://github.com/Shimul-hub/QueueStorm-Investigator.git
+cd QueueStorm-Investigator
+docker build -t queuestorm-team .
+docker run -p 8000:8000 --env-file .env.example queuestorm-team
+curl http://localhost:8000/health
+```
+
+Judges can also run: `docker run -p 8000:8000 --env-file judging.env queuestorm-team`
+
+Image target: under 500MB · binds `0.0.0.0` · no GPU · no secrets baked in.
 
 ## Quick Start (Local)
 
@@ -132,20 +146,6 @@ Copy [`.env.example`](.env.example) to `.env`. **Never commit `.env` or real API
 | `LLM_ENABLED` | `true` | Enable LLM assist |
 | `LLM_CONFIDENCE_THRESHOLD` | `0.7` | LLM triggers below this |
 | `LLM_TIMEOUT_SECONDS` | `12` | LLM call timeout |
-
----
-
-## Docker Fallback
-
-```bash
-docker build -t queuestorm-team .
-docker run -p 8000:8000 --env-file .env.example queuestorm-team
-curl http://localhost:8000/health
-```
-
-Judges can also run: `docker run -p 8000:8000 --env-file judging.env queuestorm-team`
-
-Image target: under 500MB · binds `0.0.0.0` · no GPU · no secrets baked in.
 
 ---
 
