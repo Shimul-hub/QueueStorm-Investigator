@@ -6,9 +6,9 @@ Hybrid AI/API support copilot: **rules decide evidence and routing**; **OpenRout
 
 | Resource | URL |
 |----------|-----|
-| **Live Demo API** | `https://queuestorm-investigator-5btq.onrender.com` |
-| **Swagger UI** | `https://queuestorm-investigator-5btq.onrender.com/docs` |
-| **Health Check** | `https://queuestorm-investigator-5btq.onrender.com/health` |
+| **Live Demo API** | https://queuestorm-investigator-5btq.onrender.com |
+| **Swagger UI** | https://queuestorm-investigator-5btq.onrender.com/docs |
+| **Health Check** | https://queuestorm-investigator-5btq.onrender.com/health |
 | **GitHub** | https://github.com/Shimul-hub/QueueStorm-Investigator |
 
 ---
