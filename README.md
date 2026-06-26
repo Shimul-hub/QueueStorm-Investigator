@@ -27,6 +27,8 @@ Judges can also run: `docker run -p 8000:8000 --env-file judging.env queuestorm-
 
 Image target: under 500MB · binds `0.0.0.0` · no GPU · no secrets baked in.
 
+---
+
 ## Quick Start (Local)
 
 ```bash
