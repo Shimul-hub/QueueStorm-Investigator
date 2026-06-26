@@ -1,0 +1,22 @@
+services:
+  queuestorm-api:
+    type: web
+    name: queuestorm-investigator
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: LLM_ENABLED
+        value: "true"
+      - key: OPENROUTER_MODEL
+        value: meta-llama/llama-3.1-8b-instruct
+      - key: OPENROUTER_FALLBACK_MODEL
+        value: google/gemini-2.0-flash-001
+      - key: LLM_CONFIDENCE_THRESHOLD
+        value: "0.7"
+      - key: LLM_TIMEOUT_SECONDS
+        value: "8"
+      - key: LOG_LEVEL
+        value: info
+      - key: OPENROUTER_API_KEY
+        sync: false

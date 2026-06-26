@@ -1,0 +1,13 @@
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+.env
+.git
+tests
+scripts
+*.pdf
+*.md
+SUST_Preli_Sample_Cases.json
+samples
